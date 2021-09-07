@@ -8,22 +8,20 @@ def merge_sort(arr):
         left = arr[:mid]
         # into 2 halves
         right = arr[mid:]
- 
         # Sorting the first half
-        mergeSort(L)
- 
+        merge_sort(left)
         # Sorting the second half
-        mergeSort(R)
+        merge_sort(right)
  
         i = j = k = 0
  
-        # Copy data to temp arrays L[] and R[]
-        while i < len(L) and j < len(R):
-            if L[i] < R[j]:
-                arr[k] = L[i]
+        # Copy data to temp arrays left[] and R[]
+        while i < len(left) and j < len(right):
+            if left[i] < right[j]:
+                arr[k] = left[i]
                 i += 1
             else:
-                arr[k] = R[j]
+                arr[k] = right[j]
                 j += 1
             k += 1
  
