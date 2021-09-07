@@ -1,15 +1,13 @@
 test_arr = [1000, 1000000, 1, -15 , 33]
 
-def mergeSort(arr):
+def merge_sort(arr):
     if len(arr) > 1:
          # Finding the mid of the array
         mid = len(arr)//2
- 
         # Dividing the array elements
-        L = arr[:mid]
- 
+        left = arr[:mid]
         # into 2 halves
-        R = arr[mid:]
+        right = arr[mid:]
  
         # Sorting the first half
         mergeSort(L)
