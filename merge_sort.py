@@ -14,7 +14,6 @@ def merge_sort(arr):
         merge_sort(right)
  
         i = j = k = 0
- 
         # Copy data to temp arrays left[] and R[]
         while i < len(left) and j < len(right):
             if left[i] < right[j]:
@@ -26,13 +25,13 @@ def merge_sort(arr):
             k += 1
  
         # Checking if any element was left
-        while i < len(L):
-            arr[k] = L[i]
+        while i < len(left):
+            arr[k] = left[i]
             i += 1
             k += 1
  
-        while j < len(R):
-            arr[k] = R[j]
+        while j < len(right):
+            arr[k] = right[j]
             j += 1
             k += 1
     return arr
